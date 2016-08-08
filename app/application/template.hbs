@@ -2,14 +2,17 @@
   {{top-nav}}
 
   <div class="main">
-      {{outlet}}
+    {{outlet}}
 
-      {{game-card game='sushi'}}
+    <div class="cards">
+      {{game-card game="sushi"}}
+      {{game-card game="dominion"}}
+    </div>
   </div>
 
-    <footer class="footer">
-      <ul class="footer-left">
-        <li>copyright &copy; 2016</li>
-      </ul>
-    </footer>
-  </div>
+  <footer class="footer">
+    <ul class="footer-left">
+      <li>Copyright &copy; 2016</li>
+    </ul>
+  </footer>
+</div>
