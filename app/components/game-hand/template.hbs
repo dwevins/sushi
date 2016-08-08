@@ -1,0 +1,9 @@
+<div class="hand">
+  <h2>you are playing {{game}}</h2>
+
+  <div class="cards">
+    {{yield game}}
+  </div>
+
+  <button {{action 'changeGame'}}>change game</button>
+</div>

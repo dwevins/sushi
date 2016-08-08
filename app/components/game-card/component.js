@@ -26,8 +26,17 @@ export default Ember.Component.extend({
   },
 
   computeStyle(gameDetails) {
+    const index = this.get('cardNumber') - 1;
+
+    const leftOffset = index % gameDetails.width;
+    const topOffset = Math.floor(index/gameDetails.width);
+
+    const leftStyle = `left: calc(-100% * ${leftOffset});`;
+    const topStyle = `top: calc(-100% * ${topOffset});`;
+
     const widthStyle = `width: calc(100% * ${gameDetails.width});`;
     const heightStyle = `height: calc(100% * ${gameDetails.height});`;
-    this.set('imageStyle', `${widthStyle} ${heightStyle}`);
+
+    this.set('imageStyle', `${widthStyle} ${heightStyle} ${leftStyle} ${topStyle}`);
   }
 });
